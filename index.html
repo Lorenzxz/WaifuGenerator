@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Hosting: Github
-    Developer: .riviox
-    Domain: is-a.dev
-    License: GNU GPL v3
--->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,30 +14,11 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./assets/baobab.txt"><img src="./assets/favicon.png" alt="" class="logo">  Waifu Generator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/riviox/WaifuGenerator">Source Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
-                    </li>
-                    <div class="share">
-                        <a class="btn btn-primary" id="share">Share Image</a>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <div class="modal fade" id="copied">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -65,99 +40,60 @@
 
         <div class="toggle">
             <input type="checkbox" id="nsfwToggle">
-            <label for="nsfwToggle">  nsfw?</label>
+            <label for="nsfwToggle">  NSFW</label>
         </div>
         <div class="sfw">
-            <button class="random-waifu btn btn-primary">Generate SFW</button>
+            <button class="random-waifu btn btn-primary">Create SFW</button>
             <select class="form-select">
-                <option value="waifu">waifu</option>
-                <option value="neko">neko</option>
-                <option value="shinobu">shinobu</option>
-                <option value="megumin">megumin</option>
-                <option value="bully">bully</option>
-                <option value="cuddle">cuddle</option>
-                <option value="cry">cry</option>
-                <option value="hug">hug</option>
-                <option value="awoo">awoo</option>
-                <option value="kiss">kiss</option>
-                <option value="lick">lick</option>
-                <option value="pat">pat</option>
-                <option value="sumg">smug</option>
-                <option value="bonk">bonk</option>
-                <option value="yeet">yeet</option>
-                <option value="blush">blush</option>
-                <option value="smile">smile</option>
-                <option value="wave">wave</option>
-                <option value="highfive">highfive</option>
-                <option value="handhold">handhold</option>
-                <option value="nom">nom</option>
-                <option value="bite">bite</option>
-                <option value="glomp">glomp</option>
-                <option value="slap">slap</option>
-                <option value="kill">kill</option>
-                <option value="kick">kick</option>
-                <option value="happy">happy</option>
-                <option value="wink">wink</option>
-                <option value="poke">poke</option>
-                <option value="dance">dance</option>
-                <option value="cringe">cringe</option>
+                <option value="waifu">WAIFU</option>
+                <option value="neko">NEKO</option>
+                <option value="shinobu">SHINOBU</option>
+                <option value="megumin">MEGUMIN</option>
+                <option value="bully">BULLY</option>
+                <option value="cuddle">CUDDLE</option>
+                <option value="cry">CRY</option>
+                <option value="hug">HUG</option>
+                <option value="awoo">AWOO</option>
+                <option value="kiss">KISS</option>
+                <option value="lick">LICL</option>
+                <option value="pat">PAT</option>
+                <option value="sumg">SMUG</option>
+                <option value="bonk">BONK</option>
+                <option value="yeet">YEET</option>
+                <option value="blush">BLUSH</option>
+                <option value="smile">SMILE</option>
+                <option value="wave">WAVE</option>
+                <option value="highfive">HIGHFIVE</option>
+                <option value="handhold">HANDHOLD</option>
+                <option value="nom">NOM</option>
+                <option value="bite">BITE</option>
+                <option value="glomp">GLOMP</option>
+                <option value="slap">SLAP</option>
+                <option value="kill">KILL</option>
+                <option value="kick">KICK</option>
+                <option value="happy">HAPPY</option>
+                <option value="wink">WINK</option>
+                <option value="poke">POKE</option>
+                <option value="dance">DANCE</option>
+                <option value="cringe">CRINGE</option>
               </select>
         </div>
         <div class="nsfw">
-            <button class="random-waifu-nsfw btn btn-danger">Generate NSFW</button>
+            <button class="random-waifu-nsfw btn btn-danger">Create NSFW</button>
             <select class="form-select form-select-nsfw">
-                <option value="waifu">waifu</option>
-                <option value="neko">neko</option>
-                <option value="trap">trap</option>
-                <option value="blowjob">blowjob</option>
+                <option value="waifu">WAIFU</option>
+                <option value="neko">NEKO</option>
+                <option value="trap">TRAP</option>
+                <option value="blowjob">BLOWJOB</option>
               </select>
         </div>
     </div>
-    <div class="other">
-        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="aboutModalLabel">About Waifu Generator</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p>Welcome to the Waifu Generator, your source for randomly generated waifu images.
-                            Whether you're looking for a cute waifu, a playful neko, or something a bit more adventurous, our
-                            generator has you covered. Toggle the NSFW option if you're feeling horni!</p>
-                        <p>Explore the different categories, click the generate button, and discover your next waifu companion.
-                            Have fun and enjoy the world of waifus!</p>
-                        <p>WaifuGenerator uses <a href="https://waifu.pics" target="_blank">waifu.pics</a> to display images.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="contactModalLabel">Contact Me</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p>Feel free to contact me with any questions or feedback.</p>
-                        <p>Discord: .riviox</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
         var imgElement = document.querySelector(".image-wrapper img");
-        var shareButton = document.getElementById("share");
-
-        shareButton.addEventListener("click", function() {
-            var imgUrl = imgElement.src;
 
             function copyToClipboard(text) {
                 var textarea = document.createElement("textarea");
@@ -177,4 +113,5 @@
     <script src="./assets/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+        </html>
+    
