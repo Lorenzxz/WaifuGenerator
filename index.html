@@ -16,15 +16,16 @@
     <title>Waifu Generator</title>
     <meta content="#591B66" data-react-helmet="true" name="theme-color" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="app">
+   <ul>
+        <li>> Waifu Generator By Lorenzxz</li>
+    </ul>
+       <div class="app">
         <div class="image-wrapper">
             <img class="random-image img-fluid" src="" alt="">
-        </div>
-
+        </div>   
         <div class="toggle">
             <input type="checkbox" id="nsfwToggle">
             <label for="nsfwToggle"> ENABLE NSFW</label>
@@ -99,6 +100,208 @@
     </script>
     <script src="./assets/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+ul {
+        padding: 0;
+        text-align: left;
+        margin-bottom: 35px;
+        margin-top: 0px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+li {
+        list-style: none;
+        margin-bottom: 8px;
+        font-family: monospace;
+        }
+        
+        :root {
+    --background-gradient-start: #000000;
+    --background-gradient-end: #201a22;
+    --button-background: #ffffff;
+    --text-color: #ffffff;
+    --border-color: #555555;
+    --accent-color: #3a2b3f;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(180deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80vh;
+    border-radius: 15px;
+    border: 2px solid var(--accent-color);
+    z-index: 2;
+    margin-top: 0rem;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-gradient-end);
+    padding: 20px;
+}
+
+.section {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.section h2 {
+    color: var(--text-color);
+}
+
+.section p {
+    color: #666;
+}
+
+.random-image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.toggle {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#nsfwToggle {
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.form-select {
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--button-background);
+    border: 1px solid var(--border-color);
+    width: 200px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-select::after {
+    content: '\25BC';
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-color);
+}
+
+.form-select:hover {
+    border-color: var(--border-color);
+}
+
+.form-select:focus {
+    border-color: var(--border-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-select option:checked {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.form-select option:hover {
+    background-color: var(--border-color);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .app {
+        margin: 5px;
+        margin-top: 3rem;
+    }
+
+    .image-wrapper {
+        height: 50vh;
+    }
+
+}
+
+</style>
 </body>
-                                             </html>
-    
+</html>
