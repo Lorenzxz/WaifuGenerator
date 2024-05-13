@@ -44,7 +44,7 @@ function generateWaifu() {
 async function fetchWaifu() {
 	let category = formSelect.value;
 
-	await fetch(`https://api.waifu.pics/sfw/${category}`)
+	await fetch(`https://fantox-apis.vercel.app/${category}`)
 		.then(response => response.json())
 		.then(quote =>  {
 			randomImage.src = quote.url
@@ -53,7 +53,7 @@ async function fetchWaifu() {
 
 async function fetchWaifuNsfw() {
 	let category = formSelectNsfw.value;
-	await fetch(`https://api.waifu.pics/nsfw/${category}`)
+	await fetch(`https://fantox-apis.vercel.app/${category}`)
 		.then(response => response.json())
 		.then(quote =>  {
 			randomImage.src = quote.url
